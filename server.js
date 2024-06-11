@@ -11,9 +11,9 @@ process.env.SQWEQWET
 app.use(express.json())
 app.use(morgan('dev'))
 
-app.get("/", (req, res) => {
-    res.send(`Welcome to the server`)
-})
+// app.get("/", (req, res) => {
+//     res.send(`Welcome to the server`)
+// })
 // Connect to Database
 const connectedDB = async () => {
     try {
