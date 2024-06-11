@@ -28,7 +28,7 @@ connectedDB()
 
 // Routes
 /* Authorization/User Creation route */   
-app.use('/api/auth', require("./routes/authRouter.js"))
+app.use('/auth', require("./routes/authRouter.js"))
 // Token Generation/Authorization route 
 app.use('/api/rock-the-vote-main', expressjwt({ secret: `${process.env.SQWEQWET}`, algorithms: [`HS256`]})) 
 /* Issue/Comment route */                 

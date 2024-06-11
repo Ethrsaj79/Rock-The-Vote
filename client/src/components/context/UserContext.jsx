@@ -25,7 +25,7 @@ const UserContextProvider = (props) => {
     const [userState, setUserState] = useState(initState)
 
     const signUp = async (credentials) => {
-        axios.post(`/api/auth/signup`, credentials)
+        axios.post(`/auth/signup`, credentials)
             .then(res => {
                 const {user, token} = res.data
                 localStorage.setItem("token", token)
@@ -40,7 +40,7 @@ const UserContextProvider = (props) => {
             .catch(err => console.log(err.response.data.errMsg))
     }    
     const login = (credentials) => {
-        axios.post('/api/auth/login', credentials)
+        axios.post('/auth/login', credentials)
         .then(res => {
             const {user, token} = res.data
             localStorage.setItem("token", token)
